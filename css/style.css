@@ -1,0 +1,2298 @@
+
+
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus, :active{outline: none;}
+a:focus,a:active{outline: none;}
+nav, footer, header, aside{display: block;}
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-ms-focus-inner {padding: 0; border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: 	none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+
+
+
+
+
+/*-------------------------------------------------------*/
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../fonts/Poppins-Bold.eot');
+    src: local('Poppins Bold'), local('Poppins-Bold'),
+        url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.eot');
+    src: local('Poppins Regular'), local('Poppins-Regular'),
+        url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+/*-------------------------------------------------------*/
+
+html
+{
+	scroll-behavior: smooth;
+}
+
+a:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+button
+{
+	transition: all .3s ease 0s;
+	background-color: #000;
+}
+
+button:hover
+{
+	background-color: #000;	
+	cursor: pointer;	
+}
+
+/*-------------------------------------------------------*/
+
+.burger
+{
+	display: none;
+	font-family: Poppins;
+}
+
+.burger__container
+{
+	display: inline-block;
+	margin: 20px;
+}
+
+.burger__close
+{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+
+.burger__close img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.burger__items
+{
+	margin: 0 25px;
+	display: flex;
+	flex-direction: column;
+}
+
+.burger__item
+{
+	font-size: 18px;
+	margin: 2px 0;
+	padding: 3px 0;
+}
+
+
+header
+{
+	width: 100%;
+	display: inline-block;
+}
+
+.header__container
+{
+	margin: 0 80px;
+}
+
+.header__body
+{
+	display: flex;
+	align-items: center;
+	margin: 6px 0 24px;
+}
+
+.header__logo
+{
+	font-family: PoppinsBold;
+	font-size: 28px;
+	padding: 0 40px 0 0;
+}
+
+.header__items
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 0 auto;
+}
+
+.header__item
+{
+	font-family: Poppins;
+	font-size: 15px;
+	padding: 5px 10px;
+	margin: 5px 10px;
+}
+
+.header__burger
+{
+	cursor: pointer;
+	display: none;
+}
+
+.burger-item
+{
+	border-radius: 2vw;
+	background-color: #000;
+	width: 25px;
+	height: 3px;
+	margin: 3px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main__start
+{
+	position: relative;
+	overflow: hidden;
+}
+
+
+.start__body
+{
+	position: relative;
+	z-index: 3;
+	width: 50vw;
+	margin: 0 auto;
+	padding: 170px 0 320px 0;
+}
+
+.start__text
+{
+	font-family: Poppins;
+	color: #fff;
+	text-align: center;
+	font-size: 70px;
+	margin-bottom: 50px;
+	line-height: 120%;
+}
+
+.start__buttons
+{
+	display: flex;
+	justify-content: center;
+}
+
+.start__button
+{
+	margin: 0 14px;
+	position: relative;
+}
+
+.start__blur
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0.2;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	transition: all .3s ease 0s;
+	border-radius: 6px;
+}
+
+
+.start__button button
+{
+	position: relative;
+	z-index: 2;
+	font-family: PoppinsBold;
+	letter-spacing: 1px;
+	font-size: 15px;
+	color: #fff;
+	background-color: #FD8558;
+	padding: 13px 40px;
+	height: 100%;
+}
+
+
+.start__button:nth-child(2) button
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 3px solid #FD8558;
+}
+
+.start__button:nth-child(2) button:hover
+{
+	border: 3px solid #E96F42;
+}
+
+
+.start__background
+{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.start__background img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.start__planet
+{
+	position: absolute;
+	top: 1vw;
+	right: 9vw;
+	z-index: 2;
+	width: 150px;
+	height: 150px;
+}
+
+.start__planet:nth-child(2)
+{
+	transform: rotate(175deg);
+	top: -11vw;
+	left: -11vw;
+	width: 400px;
+	height: 400px;
+}
+
+.start__planet:nth-child(3)
+{
+	transform: rotate(-10deg);
+	top: 35vw;
+	right: -10vw;
+	width: 500px;
+	height: 500px;
+}
+
+.start__planet img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.start__cross
+{
+	position: absolute;
+	z-index: 2;
+	left: 100px;
+	bottom: 130px;
+	width: 50px;
+	height: 50px;
+}
+
+.start-cross
+{
+	position: absolute;
+	z-index: 2;
+	width: 50px;
+	height: 50px;	
+	top: 290px;
+	right: 212px;
+}
+
+.start__cross img
+{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main__about
+{
+	overflow: hidden;
+	font-family: Poppins;
+}
+
+.about__container
+{
+	display: inline-block;
+	margin-bottom: 100px;
+}
+
+
+.about__title
+{
+	margin: 50px 0 0 15px;
+	font-size: 150px;
+	color: #F7F7F7;
+}
+
+.about__body
+{
+	margin: 30px 115px 100px;
+}
+
+
+.about__texts
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.about__main
+{
+	flex: 1 1 40%;
+	margin-top: 30px;
+}
+
+.about__subtitle
+{
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #FD8558;
+	margin-bottom: 20px;
+}
+
+.about__text
+{
+	font-size: 40px;
+	line-height: 135%;
+}
+
+.about__other
+{
+	flex: 1 1 60%;
+	padding-left: 100px;
+}
+
+.other__text
+{
+	font-size: 18px;
+	line-height: 170%;
+	margin-bottom: 11px;
+}
+
+.other__subtext
+{
+	font-size: 15px;
+	line-height: 170%;
+	color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+.about__mission
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 60px 0 100px;
+}
+
+.mission__img
+{
+	min-width: 45%;
+	height: 30%;
+	margin: 0 30px;
+}
+
+.mission__img img
+{	
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: right;
+}
+
+.mission__text
+{
+	padding: 0 30px;
+}
+
+.mission__main
+{
+	font-size: 25px;
+	line-height: 170%;
+	margin-bottom: 90px;
+}
+
+.mission__name
+{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.mission__rank
+{
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 1.8px;
+	color: #CACACA;
+}
+
+
+
+.about__cards
+{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.card
+{
+	margin: 20px auto;
+	padding: 0 30px;
+}
+
+.card__item
+{
+	text-align: center;
+}
+
+.card__image
+{
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.card__img
+{
+	position: absolute;
+	top: 10px;
+	left: 30px;
+	z-index: 2;
+	margin: 0 auto;
+}
+
+.card__circle
+{
+	background-color: #FD85581A;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.purple
+{
+	background-color: #3A0F731A;
+}
+
+.green
+{
+	background-color: #70B4461A;
+}
+
+.card__title
+{
+	font-size: 24px;
+	line-height: 160%;
+	text-align: center;
+	margin: 29px 0 17px 0;
+}
+
+.card__text
+{
+	text-align: center;
+	font-size: 15px;
+	line-height: 170%;
+	color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.about__lines
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.about__line
+{
+	margin: 0 35px;
+	width: 100%;
+	height: 2px;
+	background-color: #f5f5f5;
+}
+
+.about__circle
+{
+	background-color: #FD855833;
+	min-width: 80px;
+	min-height: 80px;
+	border-radius: 50%;
+	margin: 0 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main__works
+{
+	padding-top: 20px;
+	font-family: Poppins;
+	position: relative;
+}
+
+.works__container
+{
+	margin: 40px 0;
+}
+
+.works__body
+{
+	position: relative;
+}
+
+.main__works-title
+{
+	position: absolute;
+	font-size: 200px;
+	top: 150px;
+	right: 30px;
+	color: #F7F7F7;
+}
+
+
+.works__other
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 0 135px;
+}
+
+.works__title
+{
+	font-size: 14px;
+	line-height: 110%;
+	color: #FD8558;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.works__text
+{
+	font-size: 32px;
+	line-height: 120%;
+}
+
+.works__button
+{
+	flex: 0 0 auto;
+	padding-left: 40px;
+}
+
+.works__button button
+{
+	font-family: PoppinsBold;
+	background-color: #FD8558;
+	color: #fff;
+	font-size: 15px;
+	line-height: 200%;
+	letter-spacing: 1px;
+	padding: 13px 37px;
+}
+
+
+
+.works__imgs
+{
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+	"bag house different"
+	"bigroom house second-bag";
+	width: 100%;
+	margin-top: 200px;
+}
+
+
+.works__img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.works__img img
+{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+
+.house
+{
+	grid-area: house;
+}
+
+.bag
+{
+	grid-area: bag;
+}
+
+.second-bag
+{
+	grid-area: second-bag;
+}
+
+.different
+{
+	grid-area: different;
+}
+.bigroom
+{
+	grid-area: bigroom;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main__skill
+{
+	font-family: Poppins;
+	position: relative;
+	width: 100%;
+}
+
+.skill__container
+{
+	margin: 115px 120px 100px;
+	display: inline-block;
+}
+
+.skill__body
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.skill__texts
+{
+	padding: 0 35px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.skill__title
+{
+	color: #FD8558;
+	font-size: 14px;
+	line-height: 110%;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.skill__subtitle
+{
+	font-size: 32px;
+	line-height: 120%;
+	margin-bottom: 15px;
+}
+
+.skill__text
+{
+	color: #999999;
+	font-size: 14px;
+	line-height: 180%;
+}
+
+.skill__static
+{
+	position: relative;
+	padding: 0 35px;
+	margin: 0 auto;
+}
+
+.static__text
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.static__title
+{
+	font-size: 18px;
+	line-height: 140%;
+}
+
+.static__num
+{
+	font-size: 15px;
+	line-height: 150%;
+	color: #999999;
+}
+
+.static__line
+{
+	position: relative;
+	width: 100%;
+	min-width: 600px;
+	height: 10px;
+	margin-bottom: 45px;
+}
+
+.static__line-container
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.static__full-line
+{
+	width: 100%;
+	height: 100%;
+	background-color: #EEEEEE;
+}
+
+.num-1
+{
+	width: 90%;
+}
+
+.num-2
+{
+	width: 80%;
+}
+
+.num-3
+{
+	width: 95%;
+}
+
+.static__fill-line
+{
+	position: absolute;
+	top: 0;
+	background: linear-gradient(90deg, #FF4803 0%, #FFAE35 59.74%);
+	width: 90%;
+	height: 100%;
+}
+
+.fill-line-2
+{
+	width: 80%;
+}
+
+.fill-line-3
+{
+	width: 95%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main__team
+{
+	font-family: Poppins;
+}
+
+.team__container
+{
+	display: inline-block;
+	margin: 10px 150px 115px;
+}
+
+.team__subtitle
+{
+	color: #FD8558;
+	font-size: 14px;
+	letter-spacing: 2px;
+	line-height: 110%;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 28px;
+}
+
+.team__title
+{
+	font-size: 32px;
+	line-height: 130%;
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.team__images
+{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.team__image
+{
+	position: relative;
+	width: 350px;
+	height: 350px;
+	margin: 15px;
+	flex: 1 1 auto;
+}
+
+.team__name
+{
+	position: relative;
+	z-index: 2;
+	color: #f3f3f3;
+	font-size: 24px;
+	margin-top: 150px;
+	text-align: center;
+	line-height: 125%;
+}
+
+.team__rank
+{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	color: #f3f3f3;
+	font-size: 14px;
+	line-height: 170%;
+	text-align: center;
+}
+
+.team__img
+{
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+.team__img img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.team__button
+{
+	margin-top: 65px;
+	text-align: center;
+}
+
+.team__button button
+{
+	color: #fff;
+	background-color: #FD8558;
+	font-size: 15px;
+	line-height: 200%;
+	padding: 13px 37px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main__news
+{
+	padding-top: 20px;
+	font-family: Poppins;
+}
+
+.news__container
+{
+	display: inline-block;
+	margin: 0 135px 120px;
+}
+
+.news__subtitle
+{
+	font-size: 14px;
+	line-height: 110%;
+	color: #FD8558;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 45px;
+}
+
+.news__title
+{
+	font-size: 32px;
+	line-height: 130%;
+	text-align: center;
+	margin-bottom: 26px;
+}
+
+.news
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.news-info
+{
+	margin: 30px auto;
+	padding: 0 15px;
+	flex: 0 1 33%;
+}
+
+.news-img
+{
+	width: 100%;
+	height: 240px;
+}
+
+
+.news-img img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.news-main
+{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 18px 0 20px;
+}
+
+.news-style
+{
+	color: #FD8558;
+	font-size: 15px;
+	line-height: 140%;
+	padding: 2px 0;
+	transition: all .3s ease 0s;
+}
+
+.news-style:hover
+{
+	cursor: pointer;
+	color: #E96F42;
+}
+
+.news-category
+{
+	color: #FD8558;
+	font-size: 15px;
+	line-height: 140%;
+	margin-left: 10px;
+	padding: 2px 0;
+	transition: all .3s ease 0s;
+}
+
+.news-category:hover
+{
+	cursor: pointer;
+	color: #E96F42;
+}
+
+.news-date
+{
+	color: #999999;
+	font-size: 14px;
+	line-height: 150%;
+	margin-left: 30px;
+	padding: 2px 0;
+}
+
+.news-text
+{
+	font-size: 24px;
+	line-height: 137.5%;
+	margin-bottom: 36px;	
+}
+
+.news-more
+{
+	display: inline-block;
+	font-size: 15px;
+	line-height: 140%;
+	color: #FD8558;
+	transition: all .3s ease 0s;
+}
+
+.news-more:hover
+{
+	cursor: pointer;
+	color: #E96F42;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.address
+{
+	padding-top: 20px;
+	margin-top: 60px;
+}
+
+.address__content
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.address__texts
+{
+	padding-right: 35px;	
+	flex: 1 1 33.333%;
+}
+
+.address__title
+{
+	color: #22222266;
+	font-size: 14px;
+	line-height: 140%;
+	letter-spacing: 2px;
+}
+
+.address__text
+{
+	font-size: 24px;
+	line-height: 137.5%;
+	margin-bottom: 45px;
+}
+
+.address__mail
+{
+	flex: 1 1 66.666%;
+	padding-left: 35px;
+}
+
+.mail__main
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+.address__name
+{
+	flex: 1 1 auto;
+}
+
+
+.address-mail
+{
+	flex: 1 1 auto;
+}
+
+.address__input
+{
+	border: 1px solid #EEEEEE;
+	margin: 15px;
+	border-radius: 5px;
+}
+
+
+.address__input input, textarea
+{
+	width: 100%;
+	padding: 1vw 2vw;
+	font-size: 18px;
+	border-radius: 5px;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1320px)
+{
+
+	.static__line
+	{
+		min-width: 500px;
+	}
+
+}
+
+@media(max-width: 1200px)
+{
+
+
+
+
+	.start__planet:nth-child(2)
+	{
+		width: 300px;
+		height: 300px;
+	}
+
+	.start__planet:nth-child(3)
+	{
+		top: 50vw;
+		width: 400px;
+		height: 400px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.static__line
+	{
+		min-width: 400px;
+	}
+
+
+
+
+
+
+
+
+
+	.team__image
+	{
+		width: 300px;
+		height: 300px;
+	}
+
+	.team__name
+	{
+		margin-top: 125px;
+	}
+
+
+
+
+
+
+	.news-info
+	{
+		flex: 0 1 50%;
+	}
+
+
+
+}
+
+@media(max-width: 1100px)
+{
+
+	.about__cards
+	{
+		flex-wrap: wrap;
+	}
+
+	.card
+	{
+		flex: 1 1 50%;
+	}
+
+
+
+
+
+
+
+
+
+	.team__container
+	{
+		margin: 10px 75px 115px;
+	}
+
+
+
+}
+
+
+@media(max-width: 991px)
+{
+
+
+
+
+
+
+	.start__planet:nth-child(3)
+	{
+		top: 60vw;
+	}
+
+
+
+
+
+
+
+
+
+
+	
+	.about__texts
+	{
+		flex-wrap: wrap;
+	}
+
+	.about__main
+	{
+		flex: 1 1 100%;
+	}
+
+	.about__other
+	{
+		flex: 1 1 100%;
+		padding: 30px 0 0;
+	}
+
+
+
+
+
+
+
+	.static__line
+	{
+		min-width: 300px;
+	}
+
+
+
+
+
+
+
+
+
+	.about__mission
+	{
+		flex-wrap: wrap;
+	}
+
+	.mission__img
+	{
+		width: 100%;
+		height: 40vw;
+	}
+
+
+	.mission__text
+	{
+		margin-top: 20px;
+	}
+
+	.mission__main
+	{
+		margin-bottom: 30px;
+	}
+
+	.mission__name
+	{
+		margin-bottom: 10px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.skill__container
+	{
+		margin: 115px 60px 100px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.team__image
+	{
+		width: 250px;
+		height: 250px;
+	}
+
+	.team__name
+	{
+		margin-top: 100px;
+	}
+
+
+
+
+
+
+
+
+	.news__container
+	{
+		margin: 0 65px 120px;
+	}
+
+
+}
+
+
+
+
+@media(max-width: 880px)
+{
+
+
+
+
+
+
+
+
+
+	.start__body
+	{
+		width: 70vw;
+	}
+
+
+	.start__planet:nth-child(3)
+	{
+		top: 65vw;
+	}
+
+
+
+
+
+
+
+
+
+	.skill__container
+	{
+		margin: 80px 60px 100px;
+	}
+
+
+	.skill__body
+	{
+		flex-wrap: wrap;
+	}
+
+	.skill__texts
+	{
+		padding: 0;
+	}
+
+	.skill__static
+	{
+		margin: 30px auto 0 auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	.static__line
+	{
+		min-width: 100%;
+	}
+
+
+
+
+
+
+	
+
+
+
+
+	.address__content
+	{
+		flex-wrap: wrap;
+	}
+
+	.address__texts
+	{
+		flex: 1 1 100%;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+
+	.address__mail
+	{
+		flex: 1 1 100%;
+		padding: 0;
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+@media(max-width: 767px)
+{
+
+
+	.start__planet:nth-child(3)
+	{
+		top: 70vw;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.works__other
+	{
+		margin: 0 60px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.team__container
+	{
+		margin: 10px 40px 115px;
+	}
+
+
+
+
+
+
+
+
+	.news-info
+	{
+		flex: 0 1 100%;
+		margin: 45px auto;
+	}
+
+
+
+	.women
+	{
+		height: unset;
+	}
+
+	.news-main
+	{
+		margin: 10px 0 8px;
+	}
+
+	.news__subtitle
+	{
+		margin-bottom: 10px;
+	}
+
+	.news__title
+	{
+		margin-bottom: 10px;
+	}
+
+	.news-text
+	{
+		margin-bottom: 16px;
+	}
+
+
+
+}
+
+
+
+@media(max-width: 700px)
+{
+
+
+	.start__planet
+	{
+		width: 100px;
+		height: 100px;
+	}
+
+	.start__planet:nth-child(2)
+	{
+		width: 230px;
+		height: 230px;
+		top: -3vw;
+		left: -12vw;
+	}
+
+	.start__planet:nth-child(3)
+	{
+		width: 350px;
+		height: 350px;
+		top: 85vw;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	.about__body
+	{
+		margin: 30px 70px 60px;
+	}
+
+
+	.card
+	{
+		flex: 1 1 100%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	.main__works-title
+	{
+		font-size: 150px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.team__image
+	{
+		width: 220px;
+		height: 220px;
+	}
+
+	.team__name
+	{
+		margin-top: 85px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.mail__main
+	{
+		flex-wrap: wrap;
+	}
+
+	.address__name
+	{
+		flex: 1 1 100%;
+	}
+
+	.address-mail
+	{
+		flex: 1 1 100%;
+	}
+
+
+
+
+
+
+
+}
+
+
+@media(max-width: 600px)
+{
+
+	.start__body
+	{
+		width: 100%;
+		padding: 100px 15px 250px;
+	}
+
+
+	.mission__img
+	{
+		margin: 0;
+	}
+
+	.mission__text
+	{
+		padding: 0;
+	}
+
+
+
+	.about__circle
+	{
+		min-width: 60px;
+		min-height: 60px;
+	}
+
+
+
+
+
+
+
+	.works__imgs
+	{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 2fr 1fr;
+		grid-template-areas: 
+		"bag different"
+		"house house"
+		"bigroom second-bag";
+		margin-top: 120px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+@media(max-width: 550px)
+{
+
+
+
+
+
+	.start__planet
+	{
+		width: 100px;
+		height: 100px;
+	}
+
+	.start__planet:nth-child(2)
+	{
+		width: 190px;
+		height: 190px;
+		top: -3vw;
+		left: -12vw;
+	}
+
+	.start__planet:nth-child(3)
+	{
+		width: 300px;
+		height: 300px;
+		top: 95vw;
+	}
+
+
+
+
+
+
+
+	.about__title
+	{
+		font-size: 100px;
+	}
+
+
+
+
+
+
+
+
+
+	.main__works-title
+	{
+		font-size: 100px;
+	}
+
+	.works__other
+	{
+		flex-wrap: wrap;
+	}
+
+	.works__button
+	{
+		flex: 1 1 100%;
+		padding: 0;
+		margin-top: 20px;
+	}
+
+	.works__button button
+	{
+		width: 100%;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 474px)
+{
+
+	.header__container
+	{
+		margin: 0 40px;
+	}
+
+	.header__body
+	{
+		justify-content: space-between;
+		margin: 12px 0 18px;
+	}
+
+	.header__items
+	{
+		display: none;
+	}
+
+	.header__burger
+	{
+		display: block;
+	}
+
+	.header__logo
+	{
+		padding-right: 20px;
+	}
+
+
+
+
+
+
+	.start__body
+	{
+		padding: 100px 15px;
+	}
+
+
+	.start__planet
+	{
+		right: 2vw;
+		width: 100px;
+		height: 100px;
+	}
+
+	.start__planet:nth-child(2)
+	{
+		width: 170px;
+		height: 170px;
+		top: 4vw;
+		left: -12vw;
+	}
+
+	.start__planet:nth-child(3)
+	{
+		width: 240px;
+		height: 240px;
+		top: 105vw;
+	}
+
+
+
+
+
+
+
+	.about__body
+	{
+		margin: 30px 40px 60px;
+	}
+
+	.mission__img
+	{
+		height: 45vw;
+	}
+
+
+	.about__line
+	{
+		margin: 0 20px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.news__container
+	{
+		margin: 0 30px 120px;
+	}
+
+
+
+
+
+	.news-img
+	{
+		height: 180px;
+	}
+
+	.women
+	{
+		height: unset;
+	}
+
+
+
+}
+
+
+
+
+@media(max-width: 424px)
+{
+
+	.start__text
+	{
+		font-size: 60px;
+	}
+
+	.start__buttons
+	{
+		flex-wrap: wrap;
+	}
+
+	.start__button
+	{
+		width: 100%;
+		text-align: center;
+		margin: 10px 15px;
+	}
+
+	.start__button button
+	{
+		width: 100%;
+	}
+
+
+
+
+
+
+
+
+	.mission__img
+	{
+		height: 55vw;
+	}
+
+
+
+
+
+
+	.works__imgs
+	{
+		margin-top: 80px;
+	}
+
+	.main__works-title
+	{
+		top: 190px;
+		right: 50px;
+	}
+
+
+
+
+
+
+	.skill__container
+	{
+		margin: 50px 30px 70px;
+	}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width: 374px)
+{
+
+
+	.start__planet:nth-child(2)
+	{
+		width: 190px;
+		height: 190px;
+		top: 10vw;
+		left: -40vw;
+	}
+
+	.start__planet:nth-child(3)
+	{
+		width: 220px;
+		height: 220px;
+		top: 170vw;
+	}
+
+
+
+
+
+
+
+
+
+	.team__container
+	{
+		margin: 10px 20px 115px;
+	}
+
+
+
+
+
+
+
+	.team__image
+	{
+		width: 180px;
+		height: 180px;
+	}
+
+	.team__name
+	{
+		margin-top: 65px;
+	}
+
+
+
+
+
+
+
+
+	.news-date
+	{
+		margin-left: 16px;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------*/
+
+
+a:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+button
+{
+	transition: all .3s ease 0s;
+	border-radius: 5px;
+}
+
+img
+{
+	border-radius: 5px;
+}
+
+.works__img img
+{
+	border-radius: 0;
+}
+
+.start__background img
+{
+	border-radius: 0;
+}
+
+button:hover
+{
+	background-color: #E96F42;	
+	cursor: pointer;	
+}
+
+/*-------------------------------------------------------*/
